@@ -1,18 +1,32 @@
 'use client'
 import Image from "next/image"
 import Logo from '@/public/logo.png'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Navigation () {
     const [isOpen, setIsOpen] = useState (false)
+    const [isDisabled, setIsDisabled] = useState (false)
+    const breakpoint = 1266
     const handleClick = () => {
         setIsOpen (prev => !prev)
     }
+    useEffect (() => {
+        const check = () => {
+            const inactive = (window.innerWidth >= breakpoint)
+            setIsDisabled(inactive)
+            if (inactive && isOpen) {
+                setIsOpen(false)
+            }
+        }
+        check ()
+        window.addEventListener('resize', check)
+        return () => window.removeEventListener('resize', check)
+    }, [isOpen, breakpoint])
     return (
         <div className="flex flex-row pt-[16px] px-[20px] md:px-[50px] items-center justify-start w-full font-medium text-black">
             <Image src={Logo} width={140} alt="Company logo" className=""/>
             <div className="hidden md:block flex-row px-[16px] relative">
-                <button onClick={()=>handleClick()} className="md:flex-start flex flex-row items-center bg-[#EAE3E199]/60 px-[20px] gap-1 rounded-full py-2 hover:bg-[#EAE3E199] transition-all ease text-[16px]">
+                <button onClick={()=>handleClick()} disabled={isDisabled} className="md:flex-start flex flex-row items-center bg-[#EAE3E199]/60 px-[20px] gap-1 rounded-full py-2 hover:bg-[#EAE3E199] transition-all ease text-[16px]">
                     <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="0.5" x2="14" y2="0.5" stroke="black"/>
                         <line y1="5.5" x2="14" y2="5.5" stroke="black"/>
