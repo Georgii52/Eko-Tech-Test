@@ -34,8 +34,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "",
-  description: "",
+  title: "Эко-Тех: Деревянные дома",
+  description: "Made by Momdzhi Georgii",
 };
 
 export default function RootLayout({ children }) {
