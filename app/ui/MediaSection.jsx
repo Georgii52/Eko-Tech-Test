@@ -10,7 +10,7 @@ export default function MediaSection () {
             <div className="
             w-full
             hidden
-            md:flex flex-col lg:flex-row
+            sm:flex flex-col lg:flex-row
             items-stretch justify-between mt-15 px-[20px] md:px-[50px] gap-5">
                 <Card_1 />
                 <div className="flex gap-5">
