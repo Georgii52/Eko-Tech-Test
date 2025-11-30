@@ -3,7 +3,7 @@ export default function MainLoad () {
 
     return (
         <div className="
-        w-full flex flex-col lg:flex-row items-start lg:items-center lg:justify-between px-[20px] md:px-[52px] pt-[69px] gap-[24px]">
+        w-full flex flex-col lg:flex-row items-start lg:items-center lg:justify-between px-[20px] md:px-[52px] pt-[69px] gap-[24px] z-[1]">
             <div className="">
                 <p className="font-bold text-[24px] md:text-[32px] lg:text-[38px] xl:text-[42px]">Мы — лидеры рынка России<br></br> по строительству деревянных домов</p>
                 <p className="text-[#4D4D4D] pt-[12px] text-[14px] font-medium md:text-[16px] xl:text-[18]">

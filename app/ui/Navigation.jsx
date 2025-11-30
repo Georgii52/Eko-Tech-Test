@@ -1,12 +1,18 @@
+'use client'
 import Image from "next/image"
 import Logo from '@/public/logo.png'
+import { useState } from "react"
 
 export default function Navigation () {
+    const [isOpen, setIsOpen] = useState (false)
+    const handleClick = () => {
+        setIsOpen (prev => !prev)
+    }
     return (
         <div className="flex flex-row pt-[16px] px-[20px] md:px-[50px] items-center justify-start w-full font-medium text-black">
             <Image src={Logo} width={140} alt="Company logo" className=""/>
-            <div className="hidden md:block flex-row px-[16px]">
-                <button className="md:flex-start flex flex-row items-center bg-[#EAE3E199]/60 px-[20px] gap-1 rounded-full py-2 hover:bg-[#EAE3E199] transition-all ease text-[16px]">
+            <div className="hidden md:block flex-row px-[16px] relative">
+                <button onClick={()=>handleClick()} className="md:flex-start flex flex-row items-center bg-[#EAE3E199]/60 px-[20px] gap-1 rounded-full py-2 hover:bg-[#EAE3E199] transition-all ease text-[16px]">
                     <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line y1="0.5" x2="14" y2="0.5" stroke="black"/>
                         <line y1="5.5" x2="14" y2="5.5" stroke="black"/>
@@ -14,6 +20,7 @@ export default function Navigation () {
                     </svg>
                     Меню
                 </button>
+                <DropDownMenu isOpen={isOpen} />
             </div>
             <div className="hidden xl:flex flex-row flex-1 items-center justify-start gap-5">
                 <button className="flex flex-row items-center gap-[3px] text-[16px]">
@@ -76,6 +83,59 @@ export default function Navigation () {
                     </button>
                 </div>
             </div>
+        </div>
+    )
+}
+
+export function DropDownMenu ({ isOpen }) {
+    return (
+        <div className={`
+        absolute z-10 bg-gray-100 w-[150%] rounded-2xl
+        flex flex-col gap-2 px-5 py-2 items-start justify-between
+        transition-all duration-300 ease-out
+        origin-top-left
+        ${isOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'}
+        `}> 
+            <a href="./">
+                <p className="flex flex-row items-center justify-start gap-2">
+                    Проекты
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-270">
+                        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </p>
+            </a>
+            <a href="./">
+                <p className="flex flex-row items-center justify-start gap-2">
+                    Фото и видео
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-270">
+                        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </p>
+            </a>
+            <a href="./">
+                <p className="flex flex-row items-center justify-start gap-2">
+                    Для клиентов
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-270">
+                        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </p>
+            </a>
+            <a href="./">
+                <p className="flex flex-row items-center justify-start gap-2">
+                    О компании
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-270">
+                        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </p>
+            </a>
+            <a href="./">
+                <p className="flex flex-row items-center justify-start gap-2">
+                    Услуги
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-270">
+                        <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </p>
+            </a>
         </div>
     )
 }
