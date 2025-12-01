@@ -33,11 +33,3 @@ export default function MediaSection () {
         </>
     )
 }
-        // w-full flex flex-col lg:flex-row
-        // items-center lg:items-start
-        // justify-center lg:justify-between
-        // px-[16px] sm:px-[20px] md:px-[24px] lg:px-[32px] xl:px-[50px]
-        // pt-[40px] sm:pt-[50px] md:pt-[60px] lg:pt-[70px] xl:pt-[89px]
-        // gap-[12px] sm:gap-[14px] md:gap-[12px] lg:gap-[12px] xl:gap-[20px]
-        // flex-shrink-1
-        // overflow-x-hidden

@@ -35,7 +35,7 @@ export function Button_Call () {
     return (
         <div className="flex flex-col items-center justify-center w-full">
             <button className="w-full lg:w-[280px] xl:w-[328px] border-1 border-[#D7DBE2] text-black py-[16px] sm:py-[18px] md:py-[21px] mb-2 rounded-full text-[14px] sm:text-[15px] md:text-[16px] hover:bg-[#D7DBE2]/10">Задать вопрос в WhatsApp</button>
-            <p className="text-[14px] md:text-[14px] text-[#00000080]/50 text-center lg:text-left">Ответим в течение 10 минут</p>
+            <p className="text-[14px] md:text-[14px] text-[#00000080] text-center lg:text-left">Ответим в течение 10 минут</p>
         </div>
     )
 }

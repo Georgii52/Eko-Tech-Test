@@ -7,10 +7,12 @@ export default function Navigation () {
     const [isOpen, setIsOpen] = useState (false)
     const [isDisabled, setIsDisabled] = useState (false)
     const maxBreakpoint = 1266
+
     const handleClick = () => {
         setIsOpen (prev => !prev)
     }
-    useEffect (() => {
+
+    useEffect (() => {  
         const check = () => {
             const inactive = (window.innerWidth >= maxBreakpoint)
             setIsDisabled(inactive)
@@ -18,13 +20,15 @@ export default function Navigation () {
                 setIsOpen(false)
             }
         }
+
         check ()
         window.addEventListener('resize', check)
         return () => window.removeEventListener('resize', check)
     }, [isOpen, maxBreakpoint])
+
     return (
         <div className="flex flex-row pt-[16px] px-[20px] md:px-[50px] items-center justify-start w-full font-medium text-black">
-            <Image src={Logo} width={140} alt="Company logo" className=""/>
+            <Image src={Logo} width={140} alt="Company logo" />
             <div className="hidden md:block flex-row px-[16px] relative">
                 <button onClick={()=>handleClick()} disabled={isDisabled} className="md:flex-start flex flex-row items-center bg-[#EAE3E199]/60 px-[20px] gap-1 rounded-full py-2 hover:bg-[#EAE3E199] transition-all ease text-[16px]">
                     <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,7 +168,7 @@ export function DropDownMenuSmall ({ isOpen }) {
         origin-top-right
         ${isOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'}
         `}> 
-            <a href="./" className="hover:">
+            <a href="./">
                 <p className="flex flex-row items-center justify-start gap-2">
                     Проекты
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-270">

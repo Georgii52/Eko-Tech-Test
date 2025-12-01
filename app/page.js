@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navigation from "./ui/Navigation";
 import MainLoad from "./ui/MainLoad";
 import MediaSection from "./ui/MediaSection";

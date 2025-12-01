@@ -14,7 +14,6 @@ export default function Card_3 () {
             w-full md:h-full
             lg:min-h-[200px] lg:min-w-[350px]
             lg:max-h-[280px]
-            relative overflow-hidden rounded-[15px]
             relative overflow-hidden rounded-[15px]">
                 <Image src={Development} width={1600} alt="Development" className="w-full h-full object-cover object-center transition-all hover:scale-105 duration-400"/>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent pointer-events-none"></div>

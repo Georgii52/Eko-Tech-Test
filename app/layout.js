@@ -1,4 +1,3 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -23,15 +22,6 @@ const gilroy = localFont({
   variable: "--font-gilroy",
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Эко-Тех: Деревянные дома",
@@ -40,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${gilroy.variable} ${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="ru" className={`${gilroy.variable} ${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased">
         {children}
       </body>
