@@ -30,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ru" className={`${gilroy.variable} ${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="ru" className={`${gilroy.variable}`}>
       <body className="antialiased">
         {children}
       </body>
