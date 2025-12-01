@@ -14,14 +14,14 @@ export default function MainLoad () {
             </div>
             <div className=
             "w-full font-medium lg:w-auto flex flex-col md:flex-row lg:flex-col gap-[10px] lg:items-center justify-center">
-                <Button_Calc />
-                <Button_Call />
+                <ButtonCalc />
+                <ButtonCall />
             </div>
         </div>
     )
 }
 
-export function Button_Calc () {
+export function ButtonCalc () {
     return (
         <div className="w-full">
             <button className="w-full lg:w-[280px] xl:w-[328px] bg-[#578C62] text-white py-[16px] sm:py-[18px] md:py-[21px] rounded-full text-[14px] sm:text-[15px] md:text-[16px] hover:bg-[#578C62]/90 transition-all ease">Рассчитать стоимость дома</button>
@@ -31,7 +31,7 @@ export function Button_Calc () {
 
 }
 
-export function Button_Call () {
+export function ButtonCall () {
     return (
         <div className="flex flex-col items-center justify-center w-full">
             <button className="w-full lg:w-[280px] xl:w-[328px] border-1 border-[#D7DBE2] text-black py-[16px] sm:py-[18px] md:py-[21px] mb-2 rounded-full text-[14px] sm:text-[15px] md:text-[16px] hover:bg-[#D7DBE2]/10">Задать вопрос в WhatsApp</button>

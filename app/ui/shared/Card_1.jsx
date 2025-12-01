@@ -1,6 +1,6 @@
 import Image from "next/image"
 import House1 from '@/public/IstraHouse.jpg'
-
+import Arrow from "./Arrow"
 
 export default function Card_1 () {
     return (
@@ -18,14 +18,10 @@ export default function Card_1 () {
             <p className="flex items-center justify-center text-[12px] sm:text-[13px] md:text-[14px] font-medium h-[22px] text-black absolute top-3 left-3 bg-white w-[160px] sm:w-[180px] md:w-[204px] rounded-full">Наши авторские проекты</p>
             <div className="absolute flex flex-row items-center bottom-3 sm:bottom-3 md:bottom-4 left-3 sm:left-3 md:left-4 gap-[10px] sm:gap-[12px] md:gap-[14px]">
                 <button className="p-2 sm:p-2.5 md:p-3 bg-[#578C62] rounded-full">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.25 9L3.75 9M3.75 9L9 14.25M3.75 9L9 3.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    <Arrow />
                 </button>
                 <button className="p-2 sm:p-2.5 md:p-3 bg-[#578C62] rounded-full rotate-180">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.25 9L3.75 9M3.75 9L9 14.25M3.75 9L9 3.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                    <Arrow />
                 </button>
                 <div className="flex flex-col text-white">
                     <p className="text-[14px] sm:text-[16px] md:text-[18px]">Дом из клееного бруса «Истра»</p>
