@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import Card_1 from "./shared/Card_1"
 import Card_2 from "./shared/Card_2"
 import Card_3 from "./shared/Card_3"
